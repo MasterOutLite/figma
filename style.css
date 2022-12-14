@@ -73,9 +73,6 @@
 
 /*  logo  */
 
-.logo {
-}
-
 .logo__title {
   font-family: "Playfair Display";
   font-style: normal;
@@ -83,6 +80,8 @@
   font-size: 24px;
   line-height: 32px;
   color: var(--dark-blue);
+
+  cursor: pointer;
 }
 
 /*  nav  */
@@ -102,6 +101,7 @@
   font-size: 16px;
   line-height: 28px;
   color: var(--dark-blue);
+  cursor: pointer;
 }
 
 /*  nav-scrol-bar  */
@@ -125,6 +125,7 @@
 .scrol {
   width: 40px;
   height: 100%;
+  cursor: pointer;
 }
 
 .scrol_active {
@@ -152,9 +153,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   width: 168px;
   height: 26px;
+  cursor: pointer;
 }
 
 .arrow__space {
@@ -340,6 +343,7 @@
   border: 0;
   background: #0d2c4a;
   color: var(--white);
+  cursor: pointer;
 }
 
 .find-my-space__submit {
@@ -350,6 +354,7 @@
 
   background: var(--orange);
   color: var(--white);
+  cursor: pointer;
 
   font-family: "Lato";
   font-style: normal;
@@ -417,6 +422,7 @@
   width: 72px;
   height: 72px;
   background: var(--orange);
+  cursor: pointer;
 }
 
 .spce-card__show-details.active {
@@ -466,6 +472,9 @@
 }
 .our-support {
   background: var(--gray);
+  display: grid;
+  grid-row: 30% 30% 30%;
+  grid-column: 30% 30% 30%;
 }
 
 .why-frispes {

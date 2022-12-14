@@ -471,12 +471,51 @@
   height: 421px;
 }
 .our-support {
-  background: var(--gray);
   display: grid;
-  grid-row: 30% 30% 30%;
-  grid-column: 30% 30% 30%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 225px);
+  justify-content: space-between;
+}
+
+.our-support__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.our-support__item-img {
+  width: 65px;
+}
+.our-support__item-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-support__title {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
 }
 
 .why-frispes {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 54px;
   background: var(--dark-blue);
+  color: var(--white);
+}
+
+.why-frispes__title {
+  margin-bottom: 8px;
+}
+
+.why-frispes__title::after {
+  background: var(--white);
+}
+
+.why-frispes__sub-title {
+  margin-top: 24px;
+  color: var(--white);
 }

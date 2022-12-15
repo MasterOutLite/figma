@@ -122,9 +122,24 @@
   background: var(--gray);
 }
 
+.scrol-bar__vertical {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 4px;
+  height: 160px;
+  background: var(--gray);
+}
+
 .scrol {
   width: 40px;
   height: 100%;
+  cursor: pointer;
+}
+
+.scrol__vertical {
+  width: 100%;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -141,6 +156,12 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
+}
+
+.counter_vertical {
+  margin-top: 24px;
+  writing-mode: vertical-lr;
+  scale: -1;
 }
 
 .counter__max {
@@ -303,6 +324,7 @@
   position: relative;
   padding: 75px 0;
 }
+
 .intro__img {
   position: absolute;
   bottom: 0px;
@@ -441,6 +463,7 @@
   line-height: 22px;
   color: var(--white);
 }
+
 .spce-card__title {
   position: absolute;
   left: 0;
@@ -457,6 +480,11 @@
 .spce-card__sub-title {
   margin-top: 14px;
   text-align: center;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
   color: var(--white);
 }
 
@@ -470,6 +498,7 @@
   width: 540px;
   height: 421px;
 }
+
 .our-support {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -485,6 +514,7 @@
 .our-support__item-img {
   width: 65px;
 }
+
 .our-support__item-data {
   display: flex;
   flex-direction: column;
@@ -518,4 +548,51 @@
 .why-frispes__sub-title {
   margin-top: 24px;
   color: var(--white);
+}
+
+/*  facilities  */
+
+.facilities {
+  width: 100%;
+}
+
+.facilities__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  height: 453px;
+
+}
+
+.facilites__buttons {
+  display: flex;
+  flex-direction: column;
+  width: 294px;
+  height: 100%;
+  padding: 24px;
+
+}
+
+.facilites__button {
+  box-sizing: border-box;
+  height: 72px;
+  width: 100%;
+  padding: 24px;
+  margin-bottom: 24px;
+
+  text-align: left;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  border: 0px;
+  background: none;
+}
+
+.facilites__button.active {
+  color: var(--white);
+  background: var(--orange);
 }

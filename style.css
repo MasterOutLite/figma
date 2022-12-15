@@ -1,4 +1,8 @@
 :root {
+
+  --arrow-height: 26px;
+  --arrow-width: 50px;
+  --arrow-width-active: 100px;
   --red: #dd2c00;
   --orange: #ff5722;
   --dark-blue: #10375c;
@@ -10,7 +14,7 @@
 /*  global  */
 
 .container {
-  width: 1110px;
+  max-width: 1110px;
   margin: 0 auto;
   position: relative;
 }
@@ -33,22 +37,47 @@
 
 /*  text  */
 
+.title-heading {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 67px;
+}
+
 .title {
   box-sizing: content-box;
 
-  font-family: "Lora";
+  font-family: 'Lora';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
+  line-height: 51px;
 }
 
 .sub-title {
-  font-family: "Lato";
+  font-family: 'Lato';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
   color: var(--gray);
+}
+
+.text {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.button-text {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .title-block {
@@ -79,9 +108,8 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+  text-decoration: none;
   color: var(--dark-blue);
-
-  cursor: pointer;
 }
 
 /*  nav  */
@@ -95,11 +123,6 @@
 
 .nav__link {
   text-decoration: none;
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 28px;
   color: var(--dark-blue);
   cursor: pointer;
 }
@@ -150,12 +173,6 @@
 .counter {
   margin-top: 8px;
   color: var(--black);
-
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
 }
 
 .counter_vertical {
@@ -173,101 +190,47 @@
 .arrow__container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  width: 168px;
-  height: 26px;
-  cursor: pointer;
-}
-
-.arrow__space {
-  height: 100%;
-  width: 22px;
 }
 
 .arrow {
-  position: relative;
-  width: 50px;
-  height: 4px;
+  width: var(--arrow-width);
+  height: var(--arrow-width);
 
-  background: var(--gray);
-  border-radius: 30px;
-}
+  cursor: pointer;
 
-.arrow::before {
-  content: "";
-  position: absolute;
-  transform-origin: left;
-  top: 1px;
-  left: 0px;
-
-  width: 20px;
-  height: 4px;
-
-  border-radius: 30px;
-  transform: rotate(-45deg);
-  background: var(--gray);
-}
-
-.arrow::after {
-  content: "";
-  position: absolute;
-  transform-origin: left;
-  top: -1px;
-  left: 0px;
-
-  width: 20px;
-  height: 4px;
-
-  border-radius: 30px;
-  transform: rotate(45deg);
-  background: var(--gray);
-}
-
-.arrow__right {
-  transform: rotate(180deg);
-}
-
-.arrow__left {
-  transform: rotate(0deg);
+  background: url("img/bg/arow.png") no-repeat;
+  background-size: 1;
+  border: 0;
 }
 
 .arrow_active {
-  width: 90px;
-  background: var(--orange);
-}
-
-.arrow_active::before {
-  background: var(--orange);
-}
-
-.arrow_active::after {
-  background: var(--orange);
+  margin-left: 12px;
+  width: var(--arrow-width-active);
+  background: url("img/bg/arrow-active.png") no-repeat;
 }
 
 /*  CTA  */
 
-.CTA__button {
+.cta {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.cta__button {
   padding: 12px 24px;
   border: 0;
   cursor: pointer;
 
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 28px;
-
   user-select: none;
 }
 
-.CTA__button_login {
+.cta__button_login {
   background: var(--white);
   color: var(--orange);
 }
 
-.CTA__button_sign {
+.cta__button_sign {
   background: var(--orange);
   color: var(--white);
 }
@@ -309,14 +272,10 @@
 }
 
 .intro__sub-title {
+  display: block;
   width: 382px;
   height: 120px;
 
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
   color: var(--gray);
 }
 
@@ -348,14 +307,9 @@
 }
 
 .find-my-space__title {
-  font-family: "Lora";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 44px;
-  color: var(--white);
-
   margin-bottom: 30px;
+
+  color: var(--white);
 }
 
 .find-my-space__select {
@@ -377,12 +331,6 @@
   background: var(--orange);
   color: var(--white);
   cursor: pointer;
-
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 28px;
 }
 
 /*  our-spaces  */
@@ -411,7 +359,6 @@
   position: relative;
   width: 350px;
   height: 468px;
-  border: 2px solid #0d2c4a;
 }
 
 .spce-card__rectangle {
@@ -456,11 +403,6 @@
 }
 
 .spce-card__show-details-text {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
   color: var(--white);
 }
 
@@ -469,22 +411,11 @@
   left: 0;
   bottom: 0;
   transform: translate(50%, 0);
-
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
 }
 
 .spce-card__sub-title {
   margin-top: 14px;
   text-align: center;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
   color: var(--white);
 }
 
@@ -582,11 +513,6 @@
   margin-bottom: 24px;
 
   text-align: left;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
 
   border: 0px;
   background: none;
